@@ -14,3 +14,6 @@ VERSION = 'alpha'
 
 from .lib.environment import AppRcParser
 ENVIRONMENT = AppRcParser()
+
+from blessings import Terminal
+TERM = Terminal()

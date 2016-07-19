@@ -19,6 +19,7 @@ class ConnectwiseCompanyApi(ConnectwiseApi):
     def __init__(self):
         super(ConnectwiseCompanyApi, self).__init__('CompanyApi.asmx')
 
+    @ConnectwiseApi.handle_errors
     def get_company(self, company_id):
         """
         Get a company from ConnectWise via the company record ID.

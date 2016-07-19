@@ -28,14 +28,7 @@ def get(summary, company_id):
     api = ConnectwiseCompanyApi()
 
     # Make the request
-    try:
-        company = api.get_company(company_id)
-    except suds.WebFault as e:
-        term = Terminal()
-        if 'First error message' in e.message:
-            e.message = e.message.split('First error message: ')[1][:-1]
-        print('{t.bright_red}{e.message}{t.normal}'.format(t=term, e=e))
-        exit()
+    company = api.get_company(company_id)
 
     # Show the data
     if summary:
