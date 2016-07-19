@@ -17,16 +17,11 @@ from ccli.lib.connectwise import ConnectwiseCompanyApi
 # CLI Command "get" for group "company"
 
 @click.command()
-@click.option('--summary', is_flag=True, default=False, help='Show a summarized object.')
+@click.option('--summary', is_flag=True, default=False, help='Show a summary table.')
 @click.argument('company_id')
 def get(summary, company_id):
     """
-    Get a company from the ConnectWise API via the company's record ID.
-
-    :param summary:    Show a summary?
-    :param company_id: ConnectWise company record ID.
-
-    :return:
+    Get a company via ConnectWise ID.
     """
 
     # Initialize the company api
