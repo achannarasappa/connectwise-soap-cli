@@ -6,10 +6,7 @@ This file contains the source for the CLI command to get a ConnectWise company b
 from __future__ import (print_function, absolute_import)
 
 import click
-import suds
 import json
-
-from blessings import Terminal
 
 from ccli.lib.connectwise import ConnectwiseCompanyApi
 from ccli.lib.connectwise.transformer.json_transformer import JsonTransformer
