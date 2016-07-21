@@ -7,10 +7,12 @@ from __future__ import (print_function, absolute_import)
 
 import click
 import suds
+import json
 
 from blessings import Terminal
 
 from ccli.lib.connectwise import ConnectwiseCompanyApi
+from ccli.lib.connectwise.transformer.json_transformer import JsonTransformer
 
 
 ####################################################################################################
@@ -27,6 +29,9 @@ def get(summary, company_id):
     # Initialize the company api
     api = ConnectwiseCompanyApi()
 
+    # Initialize the JSON transformer
+    transformer = JsonTransformer()
+
     # Make the request
     company = api.get_company(company_id)
 
@@ -40,5 +45,5 @@ def get(summary, company_id):
         print(table.table)
         return
     else:
-        print(company)
+        print(json.dumps(transformer.transform_to_dict(company)))
         return
