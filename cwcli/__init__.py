@@ -12,7 +12,9 @@ execfile(os.path.dirname(os.path.realpath(__file__)) + '/meta.py')
 ####################################################################################################
 # Module Definitions
 
-from .lib.environment import AppRcParser
+APP = __app__
+
+from cwcli.lib.environment import AppRcParser
 ENVIRONMENT = AppRcParser()
 
 from blessings import Terminal

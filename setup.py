@@ -1,10 +1,10 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 execfile('./cwcli/meta.py')
 
 setup(
     name=__app__,
-    packages=[__app__],
+    packages=find_packages(exclude=('docs', 'tests', 'bin')),
     version=__version__,
     description=__description__,
     author=__author__,
@@ -26,7 +26,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'cw = cwcli.commands.cli',
+            'cw = cwcli.commands.__init__:cli',
         ],
     },
 )
