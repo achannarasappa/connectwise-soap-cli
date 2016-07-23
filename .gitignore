@@ -89,4 +89,9 @@ ENV/
 
 # Ignore jetbrains metadata
 .idea/
+
+# Ignore Pypi RC file
 /.pypirc
+
+# Ignore deply script
+bin/deploy.sh
