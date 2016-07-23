@@ -4,7 +4,7 @@ CLI for ConnectWise SOAP API.
 """
 from __future__ import (absolute_import, print_function)
 
-from ccli.commands import cli
+from cwcli.commands import cli
 
 
 ####################################################################################################

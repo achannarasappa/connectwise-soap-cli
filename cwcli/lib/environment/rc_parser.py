@@ -9,7 +9,7 @@ import os
 
 from ConfigParser import ConfigParser
 
-from ccli import APP
+from cwcli import APP
 
 
 ####################################################################################################

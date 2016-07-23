@@ -9,7 +9,7 @@ import sys
 from suds.client import Client
 from suds import WebFault
 
-from ccli import ENVIRONMENT, TERM
+from cwcli import ENVIRONMENT, TERM
 
 
 ####################################################################################################

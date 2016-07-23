@@ -8,8 +8,8 @@ from __future__ import (print_function, absolute_import)
 import click
 import json
 
-from ccli.lib.connectwise import ConnectwiseCompanyApi
-from ccli.lib.connectwise.transformer.json_transformer import JsonTransformer
+from cwcli.lib.connectwise import ConnectwiseCompanyApi
+from cwcli.lib.connectwise.transformer.json_transformer import JsonTransformer
 
 
 ####################################################################################################
