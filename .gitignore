@@ -89,3 +89,4 @@ ENV/
 
 # Ignore jetbrains metadata
 .idea/
+/.pypirc
