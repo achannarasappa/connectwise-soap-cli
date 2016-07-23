@@ -16,6 +16,13 @@ setup(
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
     ],
+    install_requires=[
+        'blessings==1.6',
+        'click==6.6',
+        'pydash==3.4.3',
+        'suds==0.4',
+        'terminaltables==3.0.0',
+    ],
     entry_points={
         'console_scripts': [
             'cw = cwcli.commands.cli',
