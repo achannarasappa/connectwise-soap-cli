@@ -10,7 +10,8 @@ setup(
     author=__author__,
     author_email='jacob.bridges.for.hire@gmail.com',
     url='https://github.com/excelmicro/connectwise-soap-cli',
-    download_url='https://github.com/excelmicro/connectwise-soap-cli/tarball/'.format(__version__),
+    download_url='https://github.com/excelmicro/connectwise-soap-cli/tarball/{}'.format(
+        __version__),
     keywords=['connectwise', 'cli', 'terminal', 'api'],
     classifiers=[
         'Programming Language :: Python :: 2.6',
