@@ -7,7 +7,7 @@ import os
 
 
 # Load the application metadata
-execfile(os.path.dirname(os.path.realpath(__file__)) + '/meta.py')
+exec(open(os.path.dirname(os.path.realpath(__file__)) + '/meta.py', 'r').read())
 
 ####################################################################################################
 # Module Definitions
@@ -16,6 +16,3 @@ APP = __app__
 
 from cwcli.lib.environment import AppRcParser
 ENVIRONMENT = AppRcParser()
-
-from blessings import Terminal
-TERM = Terminal()

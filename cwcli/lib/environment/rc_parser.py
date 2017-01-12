@@ -3,11 +3,9 @@ ccli/lib/environment/rc_parser.py
 
 This file contains the source for the ~/.*rc file parser.
 """
-from __future__ import (print_function, absolute_import)
-
 import os
 
-from ConfigParser import ConfigParser
+from configparser import ConfigParser
 
 from cwcli import APP
 

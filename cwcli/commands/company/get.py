@@ -3,8 +3,6 @@ ccli/commands/company/get.py
 
 This file contains the source for the CLI command to get a ConnectWise company by id.
 """
-from __future__ import (print_function, absolute_import)
-
 import click
 import json
 

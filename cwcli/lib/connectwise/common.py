@@ -8,8 +8,9 @@ import sys
 
 from suds.client import Client
 from suds import WebFault
+from colored import fore
 
-from cwcli import ENVIRONMENT, TERM
+from cwcli import ENVIRONMENT
 
 
 ####################################################################################################
@@ -45,7 +46,8 @@ class ConnectwiseApi(object):
         :type wsdl_name: str
         """
         # Initialize the suds client
-        self.client = Client('{}v4_6_release/apis/2.0/{}?wsdl'.format(ENVIRONMENT.connectwise_site_url, wsdl_name))
+        self.client = Client('{}v4_6_release/apis/2.0/{}.asmx?wsdl'
+                             .format(ENVIRONMENT.connectwise_site_url, wsdl_name))
 
         # Initialize the suds credentials object
         self.credentials = self.client.factory.create('ApiCredentials')
@@ -70,7 +72,7 @@ class ConnectwiseApi(object):
             except WebFault as e:
                 if 'First error message' in e.message:
                     e.message = e.message.split('First error message: ')[1][:-1]
-                print('{t.bright_red}{e.message}{t.normal}'.format(t=TERM, e=e))
+                print('{t.bright_red}{e.message}{t.normal}'.format(t=fore, e=e))
                 sys.exit()
 
         return wrapped

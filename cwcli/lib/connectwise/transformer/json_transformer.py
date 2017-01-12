@@ -52,8 +52,8 @@ class JsonTransformer(object):
                 # Check if the value is a Python type, not a ConnectWise object type
                 value_check_type = pydash.partial(isinstance, value)
                 if any(map(value_check_type, [
-                    basestring, int, float, long, complex, bytearray, buffer, xrange, set,
-                    frozenset, datetime, list, dict, tuple, bool
+                    str, int, float, complex, bytearray, set, frozenset, datetime, list, dict,
+                    tuple, bool, map, filter,
                 ])):
 
                     # Convert the attribute to snake case

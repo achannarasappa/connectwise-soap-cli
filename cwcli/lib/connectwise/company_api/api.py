@@ -3,8 +3,6 @@ ccli/lib/connectwise/company_api/api.py
 
 This file contains the source for the company API.
 """
-from __future__ import (print_function, absolute_import)
-
 from ..common import ConnectwiseApi
 
 
@@ -17,7 +15,7 @@ class ConnectwiseCompanyApi(ConnectwiseApi):
     """
 
     def __init__(self):
-        super(ConnectwiseCompanyApi, self).__init__('CompanyApi.asmx')
+        super(ConnectwiseCompanyApi, self).__init__('CompanyApi')
 
     @ConnectwiseApi.handle_errors
     def get_company(self, company_id):
